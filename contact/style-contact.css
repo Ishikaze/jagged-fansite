@@ -1,0 +1,449 @@
+@font-face { font-family: jagged; src: url('../assets/fonts/Living\ by\ Numbers.otf'); }
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');  
+@font-face {
+    font-family: cabin;
+    src: url(../assets/fonts/Cabin-VariableFont_wdth\,wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #398e3d;
+    --black: #181a2c;
+    --black-t1: #181a2c8e;
+    --accent-light: #9ccc9c;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header span {
+    font-size: 5.5rem;
+    color: var(--accent);
+    font-family: jagged;
+    pointer-events: none;
+    padding-right: 1rem;
+}
+
+header p {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, var(--black) 10%, var(--black-t1) 50%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-sub {
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, var(--black) 10%, var(--black-t1) 50%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.header-left {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0.5rem;
+}
+
+.header-right {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: var(--accent);
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 15rem;
+}
+
+.btn-container-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.btn-container button {
+    font-size: 1.25rem;
+    font-family: Lora;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    color: var(--accent-light);
+    border: 1px solid var(--accent-light);
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.btn-container-sub button {
+    font-size: 1rem;
+    font-family: Lora;
+    margin: 1rem 0.25rem 0.25rem 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    color: var(--accent-light);
+    border: 1px solid var(--accent-light);
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.btn-container button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--accent-light);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-container-sub button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--accent-light);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-container button:hover::before {
+    scale: 3;
+}
+
+.btn-container-sub button:hover::before {
+    scale: 3;
+}
+
+.btn-container button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(98, 193, 106, 0.4);
+}
+
+.btn-container-sub button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(98, 193, 106, 0.4);
+}
+
+.btn-container button:active {
+    scale: 1;
+}
+
+.btn-container-sub button:active {
+    scale: 1;
+}
+
+.contact-banner {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/img/contact-banner.png);
+    background-position: top;
+    background-size: fill;
+    z-index: -2;
+}
+
+.contact-banner-overlay {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+}
+
+
+footer {
+    position: fixed;
+    font-size: 1rem;
+    color: var(--accent-light);
+    opacity: 0.25;
+    bottom: 6px;
+    left: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    max-width: 40rem;
+    margin-top: 2rem;
+}
+
+.card {
+    position: relative;
+    margin: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.discord {
+    width: 80vw;
+    max-width: 40rem;
+    height: auto;
+    background-color: #424549;
+    background-image: linear-gradient(43deg, #1e2124 0%, #36393e 46%, #424549 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #FFF;
+    font-family: Cabin;
+}
+
+.discord p {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.discord h2 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.discord h3 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+.top-discord-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.pfp-section {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.pfp-status-container {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#pfp {
+    background-color: #00000000;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.status-container {
+    background-color: #212121;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: translateX(-5%) translateY(-5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status {
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.discord-buttons a {
+    width: 50%;
+    margin: 0rem 0.5rem;
+}
+
+.discord-buttons button {
+    position: relative;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-style: none;
+    color: #FFF;
+    margin-top: .75rem;
+    border-radius: 6px;
+}
+
+.discord hr {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+#join {
+    background-color: #5865F2;
+}
+
+#add {
+    background-color: #646464;
+}
+
+.discord-buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 19rem;
+    width: 47%;
+    height: 18rem;
+}
+
+.basic card-title {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #FFF;
+    font-family: Cabin;
+}
+
+.basic hr {
+    position: absolute;
+    max-width: 17rem;
+    width: 85%;
+    top: 2.25rem;
+    left: 1rem;
+}
+
+.basic a {
+    font-family: Cabin;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.basic a i {
+    font-size: 5rem;
+}
+
+.basic a p {
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.tiktok a i {
+    margin-bottom: 0.5rem;
+}
+
+.email {
+    background-color: #001F3F;
+    background-image: linear-gradient(43deg, #001F3F 0%, #3A6D8C 46%, #EAD8B1 100%);
+}
+
+.instagram {
+    background-color: #405DE6;
+    background-image: linear-gradient(43deg, #405DE6 0%, #FD1D1D 46%, #FCAF45 100%);
+}
+
+.youtube {
+    background-color: #FF0000;
+    background-image: linear-gradient(43deg, #282828 0%, #FD1D1D 46%, #FF0000 100%);
+}
+
+.tiktok {
+    background-color: #000000;
+    background-image: linear-gradient(43deg, #00f2ea 0%, #000 46%, #ff0050 100%);
+}
